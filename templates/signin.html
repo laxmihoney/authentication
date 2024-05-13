@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}SignIn-{% endblock title %}
+{% block body %}
+<h1>Authentication application Signin page</h1><br>
+<form action="/signin/" method="post">
+    {% csrf_token %}
+    <label for="">Username</label><br>
+    <input type="text" name="username" id="username" placeholder="yourusername" required><br>
+    <label for="">Password</label><br>
+    <input type="password" name="password" id="password" placeholder="yourpassword" required><br>
+    <button type="submit">signin</button>
+
+</form>
+<h3>Don't have account signup instead</h3>
+<button><a href="/signup">signup</a></button><br>
+{% endblock body %}
